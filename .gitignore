@@ -1,0 +1,17 @@
+# Ignore logs and experiment outputs
+third_party/training/evals/logs/
+third_party/training/evals/*.png
+third_party/training/evals/logs/*.png
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Conda
+.env
+*.env
+
+# OS
+.DS_Store
+Thumbs.db
