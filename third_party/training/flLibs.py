@@ -22,7 +22,7 @@ from torch.autograd import Variable
 from torchvision import datasets, transforms
 import torchvision.models as tormodels
 from torch.utils.data.sampler import WeightedRandomSampler
-from torch_baidu_ctc import CTCLoss
+#from torch_baidu_ctc import CTCLoss
 
 # libs from FLBench
 from argParser import args
