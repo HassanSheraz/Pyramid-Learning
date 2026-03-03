@@ -1,0 +1,6 @@
+# cifar10_random.yml
+# Random client selection — baseline experiment
+
+strategy: random
+
+# Inherits all other values from base_config.yml
