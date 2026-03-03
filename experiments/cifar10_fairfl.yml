@@ -1,0 +1,22 @@
+# cifar10_fairfl.yml
+# FairFL: fairness-penalized Oort (my second contribution)
+#
+# Key difference: clients that have been selected frequently get a
+# score reduction proportional to their participation rate.
+# This prevents a small group of high-utility clients from dominating
+# every round and ensures broader client participation.
+
+strategy: fairfl
+
+# How strongly to penalize over-selected clients (beta in the design doc)
+# 0.0 = pure Oort (no fairness), 1.0 = heavily penalize repeat selections
+# 0.5 seems like a reasonable middle ground
+fairness_weight: 0.5
+
+# Oort base settings (same as other configs)
+exploration_factor: 0.9
+exploration_decay: 0.95
+exploration_min: 0.2
+round_threshold: 30.0
+round_penalty: 2.0
+cut_off_util: 0.7
