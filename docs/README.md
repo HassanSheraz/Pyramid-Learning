@@ -1,6 +1,9 @@
-For our capstone project, we are building on top of an existing federated learning framework called PyramidFL. Instead of rewriting everything from scratch, we are using it as a base system and focusing on improving one of its core components: client selection. In federated learning, a central server selects a subset of distributed clients in each training round. The way these clients are selected significantly affects training speed, fairness, and final model accuracy. our goal is to study and improve this selection mechanism.
-Currently, PyramidFL uses strategies such as random sampling or Oort-based selection, which prioritize clients based on estimated utility and system efficiency. However, these methods may repeatedly select the same high-performing clients, which can cause fairness issues and reduce diversity in training data. Our idea is to design a modified client selection strategy that balances performance with diversity and fairness. Specifically, I will experiment with a diversified top-K selection approach, where instead of repeatedly choosing only the highest-scoring clients, the algorithm ensures broader participation while still maintaining strong convergence speed.
-To properly evaluate this, I will conduct experiments on a single image dataset such as MNIST or CIFAR-10 to keep the project manageable within the semester timeframe. I will simulate non-IID data distributions, meaning different clients will have different subsets of labels, which reflects real-world federated learning conditions. For example, some clients may only have certain classes of images. This allows me to test how well different client selection strategies perform under challenging, heterogeneous conditions.
-Our evaluation will compare three setups: random client selection, the original Oort-based method, and our modified selection strategy. I will measure model accuracy over rounds, time-to-accuracy, and fairness metrics such as client participation frequency. The goal is to determine whether our modification improves convergence speed while also ensuring more balanced client involvement.
-Technically, we are organizing our project so that the original PyramidFL code remains untouched inside a third-party folder, and our own modifications are implemented separately. This keeps the structure clean and clearly distinguishes our contributions. All experiments will be reproducible, with configuration files and structured experiment logs.
-In summary, our project focuses on improving federated learning efficiency and fairness by modifying and evaluating client selection strategies under realistic, non-IID conditions. It combines algorithmic modification, experimental validation, and performance analysis within a practical and feasible scope for the given timeframe.
+# docs/
+
+Written documentation for the capstone.
+
+| File | Purpose |
+|---|---|
+| `design.md` | Algorithm design: DivFL and FairFL math + pseudocode |
+| `experiment_guide.md` | Step-by-step: install, run, reproduce all figures |
+| `results_summary.md` | Final results table across all strategies |

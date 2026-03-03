@@ -12,6 +12,20 @@ __pycache__/
 .env
 *.env
 
+# Capstone experiment outputs (large binary files — reproduced by running experiments)
+reports/run_random/
+reports/run_oort/
+reports/run_divfl/
+reports/run_fairfl/
+reports/figures/
+*.pkl
+*.mat
+*.pt
+*.pth
+
+# Downloaded datasets
+data/
+
 # OS
 .DS_Store
 Thumbs.db
