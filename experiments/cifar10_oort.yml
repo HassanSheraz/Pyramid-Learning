@@ -1,0 +1,14 @@
+# cifar10_oort.yml
+# Oort-based client selection (from PyramidFL, wrapped for my simulator)
+
+strategy: oort
+
+# Oort hyperparameters (keeping defaults from the original paper)
+exploration_factor: 0.9
+exploration_decay: 0.95
+exploration_min: 0.2
+round_threshold: 30.0
+round_penalty: 2.0
+cut_off_util: 0.7
+
+# everything else comes from base_config.yml
