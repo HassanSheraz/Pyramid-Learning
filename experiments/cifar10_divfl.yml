@@ -1,0 +1,20 @@
+# cifar10_divfl.yml
+# DivFL: diversity-augmented Oort (my first contribution)
+#
+# Key difference from Oort: adds a JSD diversity bonus to the
+# client score so we select clients with more varied data distributions.
+
+strategy: divfl
+
+# How much to weight diversity vs utility  (lambda in the design doc)
+# 0 = pure Oort, higher = more diversity-focused
+# 0.3 worked well in my initial tests — see reports/ablation/ for the full sweep
+diversity_weight: 0.3
+
+# Oort settings (same as cifar10_oort.yml)
+exploration_factor: 0.9
+exploration_decay: 0.95
+exploration_min: 0.2
+round_threshold: 30.0
+round_penalty: 2.0
+cut_off_util: 0.7
